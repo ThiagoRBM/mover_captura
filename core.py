@@ -23,7 +23,7 @@ def mover(initial, final):
                 if fileData >= settings.TIMESTAMP:
                     n=n+1
                     newname= (f"captura_"
-                            f"{datetime.fromtimestamp(fileData).strftime('%Y_%m_%d_%H%M%S')}_")
+                            f"{datetime.fromtimestamp(fileData).strftime('%Y_%m_%d_%H%M%S')}")
                     print("novo",newname)
                     target = final
                     while os.path.exists(target):
@@ -31,4 +31,4 @@ def mover(initial, final):
                     shutil.move(source, target)
                     print(f"arquivo {target} movido")
                 print("ouvindo")
-                time.sleep(2)
+                time.sleep(5)
