@@ -9,7 +9,7 @@ import settings
 def mover(initial, final):
     name = f"captura_{settings.DATA.strftime('%Y_%m_%d_%H%M%S')}"
     extension = ".png"
-    newname = final+"/" + name 
+    newname = final + "/" + name 
     n=0
 
     while True:
@@ -23,14 +23,9 @@ def mover(initial, final):
                 fileData= os.path.getctime(source)
                 #print(fileData)
                 if fileData >= settings.TIMESTAMP:
-                    target = newname
+                    target = final
                     while os.path.exists(target):
                         target = f"{newname}_{n}_{extension}"
                     shutil.move(source, target)
                     print(f"arquivo {target} movido")
                 time.sleep(1)
-
-#     print(settings.DATA.strftime('%Y_%m_%d'))
-#     print(initial)
-#     print(final)
-#     print("AAAAAA")
