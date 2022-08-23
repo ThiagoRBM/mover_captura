@@ -8,9 +8,7 @@ import settings
 
 
 def mover(initial, final):
-    #name = f"captura_{settings.DATA.strftime('%Y_%m_%d_%H%M%S')}"
     extension = ".png"
-    #newname = final + "/" + name 
     n=0
 
     while True:
@@ -24,11 +22,11 @@ def mover(initial, final):
                     n=n+1
                     newname= (f"captura_"
                             f"{datetime.fromtimestamp(fileData).strftime('%Y_%m_%d_%H%M%S')}")
-                    print("novo",newname)
+                    #print("novo",newname)
                     target = final
                     while os.path.exists(target):
                         target = f"{newname}_{n}_{extension}"
                     shutil.move(source, target)
-                    print(f"arquivo {target} movido")
+                    print(f"arquivo {target} movido para {final}")
                 print("ouvindo")
                 time.sleep(5)
