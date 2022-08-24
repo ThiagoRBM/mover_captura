@@ -10,9 +10,8 @@ import settings
 def mover(initial, final):
     extension = ".png"
     n=0
-
     while True:
-        newfiles = os.listdir(initial)
+        newfiles = os.listdir(initial.strip())
         for file in newfiles:
             if extension in file:
                 source = initial+"/"+file
@@ -23,7 +22,7 @@ def mover(initial, final):
                     newname= (f"captura_"
                             f"{datetime.fromtimestamp(fileData).strftime('%Y_%m_%d_%H%M%S')}")
                     #print("novo",newname)
-                    target = final
+                    target = final.strip()
                     while os.path.exists(target):
                         target = f"{newname}_{n}_{extension}"
                     shutil.move(source, target)
