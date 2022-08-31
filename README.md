@@ -2,4 +2,4 @@
 
  (feito para treinar python)
 
- "Ouve" um diretório
+ "Ouve" um diretório. E caso um arquivo png seja criado ou modificado, copia para outro diretório.
