@@ -28,6 +28,6 @@ def moverCaptura(initial=arg_dic["initial"], final=arg_dic["final"]):
     da sua execução para outro diretótio.
 
     initial: diretório a ser observado
-    final: diretório para onde os arquivos serão movidos.
+    final: diretório para onde os arquivos serão movidos, se não especificado, vai para o diretório atual.
     """
     core.mover(arg_dic["initial"],arg_dic["final"])
