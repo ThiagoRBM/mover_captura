@@ -7,7 +7,7 @@ import shutil
 import settings
 
 
-def mover(initial, final):
+def mover(initial, final=None):
     extension = ".png"
     n=0
     while True:
