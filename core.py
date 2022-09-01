@@ -26,6 +26,7 @@ def mover(initial, final=None):
                     while os.path.exists(target):
                         target = f"{newname}_{n}_{extension}"
                     shutil.move(source, target)
+                    time.sleep(1)
                     print(f"arquivo {target} movido para {final}")
-                print("ouvindo")
-                time.sleep(5)
+                if time.time() % 5 == 0:
+                    print("ouvindo")
