@@ -28,5 +28,3 @@ def mover(initial, final=None):
                     shutil.move(source, target)
                     time.sleep(1)
                     print(f"arquivo {target} movido para {final}")
-                if time.time() % 5 == 0:
-                    print("ouvindo")
